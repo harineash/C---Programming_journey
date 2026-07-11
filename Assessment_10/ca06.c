@@ -40,7 +40,7 @@ int main()
         }
         else
         {
-            printf("Both are negative numbers\n");
+            printf("Both are  negative numbers\n");
         }
     }
     return 0;
