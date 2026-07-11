@@ -1,4 +1,4 @@
-// Program to get an integer and print it as a string
+// Program to get an integer  and print it as a string
 // Uses only int variables, arrays, loops, no structures
 #include <stdio.h>
 
