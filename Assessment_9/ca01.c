@@ -1,4 +1,4 @@
-// Program to get 5 numbers from user and print the sum of all numbers using array and for loop
+// Program to get 5 numbers from user and print the sum of all numbers using array and for loop.
 #include <stdio.h>
 
 int main()
