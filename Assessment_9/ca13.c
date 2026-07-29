@@ -1,4 +1,4 @@
-// Program to store numbers until 0 is entered and check first & last equality condition
+// Program to store numbers until 0 is entered and check exactly 4 numbers in the array and first & last equality condition
 #include <stdio.h>
 
 int main()
