@@ -1,26 +1,22 @@
 // Program to get 5 numbers from user and print the biggest number using array and for loop
 #include <stdio.h>
 
-int main()
-{
-    int a[5], i, max;
+#include <stdio.h>
 
-    for (i = 0; i < 5; i++)
+int main(){
+    
+    int a[5],i,max;
+    for (i=0;i<5;i++)
     {
-        scanf("%d", &a[i]);
+        scanf("%d",&a[i]);
     }
-
-    max = a[0];
-
-    for (i = 1; i < 5; i++)
+    max=a[0];
+    for (i=1;i<5;i++)
     {
-        if (a[i] > max)
-        {
-            max = a[i];
-        }
+        if (a[i]>max)
+        max=a[i];
     }
-
-    printf("%d", max);
-
+    
+    printf("%d",max);
     return 0;
 }
