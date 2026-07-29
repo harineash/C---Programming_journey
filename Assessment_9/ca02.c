@@ -1,20 +1,19 @@
 // Program to get 5 numbers from user and print the avg of all numbers using array and for loop
 #include <stdio.h>
-int main()
-{
-    int a[5], i, sum = 0;
+#include <stdio.h>
 
-    for (i = 0; i < 5; i++)
+int main(){
+    
+    int a[5],i,sum=0,avg;
+    for (i=1;i<=5;i++)
     {
-        scanf("%d", &a[i]);
+        scanf("%d",&a[i]);
     }
-
-    for (i = 0; i < 5; i++)
+    for (i=1;i<=5;i++)
     {
-        sum = sum + a[i];
+        sum+=a[i];
     }
-
-    printf("%d", sum / 5);
-
+    avg=sum/5;
+    printf("%d",avg);
     return 0;
 }
