@@ -1,17 +1,30 @@
+// Printing odd numbers with sum 7
 #include <stdio.h>
 int main()
 {
-    int i, sum, a, b;
+    int i = 10, a, b;
 
-    for (i = 10; i <= 99; i++)
+start:
+    if (i <= 99)
     {
-        a = i / 10;
-        b = i % 10;
-        sum = a + b;
-        if (i % 2 != 0 && sum == 7)
+        if (i % 2 != 0)
         {
-            printf("%d\n", i);
+            a = i / 10;
+            b = i % 10;
+
+            if (a + b == 7)
+            {
+                printf("%d\n", i);
+            }
         }
+        i++;
+        goto start;
     }
+    else
+    {
+        goto end;
+    }
+
+end:
     return 0;
 }
