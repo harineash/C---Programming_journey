@@ -1,36 +1,35 @@
+// Interchanging first and last digits
 #include <stdio.h>
-
 int main()
 {
-    int number, temp;
-    int firstDigit, lastDigit, middlePart;
-    int power = 1;
+    int n, temp, first, last, digits = 0, pow10 = 1, result;
 
     printf("Enter a number: ");
-    scanf("%d", &number);
+    scanf("%d", &n);
 
-    temp = number;
+    temp = n;
+    last = n % 10;
 
-    // Find the last digit
-    lastDigit = number % 10;
-
-    // Find the first digit and power of 10
-    while (temp >= 10)
+count:
+    if (temp != 0)
     {
+        digits++;
         temp = temp / 10;
-        power = power * 10;
+        goto count;
     }
 
-    // First digit
-    firstDigit = temp;
+power:
+    if (digits > 1)
+    {
+        pow10 = pow10 * 10;
+        digits--;
+        goto power;
+    }
 
-    // Middle part
-    middlePart = (number % power) / 10;
+    first = n / pow10;
 
-    // Swap first and last digits
-    number = lastDigit * power + middlePart * 10 + firstDigit;
+    result = last * pow10 + (n % pow10) / 10 * 10 + first;
 
-    printf("Number after swapping = %d", number);
-
+    printf("%d", result);
     return 0;
 }
