@@ -1,16 +1,32 @@
+// sum of each digit
 #include <stdio.h>
 int main()
 {
-    long int num;
-    int sum = 0, digit;
+    int n, sum = 0, digit;
+
     printf("Enter a number: ");
-    scanf("%ld", &num);
-    while (num != 0)
+    scanf("%d", &n);
+
+    if (n == 0)
     {
-        digit = num % 10;  // get last digit
-        sum = sum + digit; // add digit
-        num = num / 10;    // remove last digit
+        sum = 0;
+        goto end;
     }
+
+start:
+    if (n != 0)
+    {
+        digit = n % 10;
+        sum = sum + digit;
+        n = n / 10;
+        goto start;
+    }
+    else
+    {
+        goto end;
+    }
+
+end:
     printf("Sum of digits = %d", sum);
     return 0;
 }
