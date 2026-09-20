@@ -1,14 +1,34 @@
 #include <stdio.h>
 int main()
 {
-    int n, i;
+    int n, i = 2, flag = 1;
+
+    printf("Enter a number: ");
     scanf("%d", &n);
-    for (i = 2; i < n; i++)
+
+    if (n <= 1)
+    {
+        flag = 0;
+        goto result;
+    }
+
+check:
+    if (i < n)
+    {
         if (n % i == 0)
         {
-            printf("Not Prime");
-            return 0;
+            flag = 0;
+            goto result;
         }
-    printf("Prime");
+        i++;
+        goto check;
+    }
+
+result:
+    if (flag == 1)
+        printf("Prime");
+    else
+        printf("Not Prime");
+
     return 0;
 }
