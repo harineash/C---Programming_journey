@@ -1,22 +1,31 @@
+// Counting no.of numbers
 #include <stdio.h>
 int main()
 {
-    long int num;
-    int count = 0;
+    int n, count = 0;
+
     printf("Enter a number: ");
-    scanf("%ld", &num);
-    if (num == 0)
+    scanf("%d", &n);
+
+    if (n == 0)
     {
         count = 1;
+        goto end;
+    }
+
+start:
+    if (n != 0)
+    {
+        n = n / 10;
+        count++;
+        goto start;
     }
     else
     {
-        while (num != 0)
-        {
-            count++;
-            num = num / 10;
-        }
+        goto end;
     }
-    printf("Total number of digits = %d", count);
+
+end:
+    printf("Total digits = %d", count);
     return 0;
 }
