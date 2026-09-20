@@ -1,12 +1,23 @@
-// To print sum 6-1
+// Printing sum from 6 to 1.
 #include <stdio.h>
 int main()
 {
-    int i, a;
-    for (i = 6; i >= 1; i--)
+    int sum = 0, i = 6;
+
+start:
+    if (i >= 1)
     {
-        a += i;
+        sum += i;
+        // printf("%d", i);
+        i--;
+        goto start;
     }
-    printf("%d\n", a);
+    else
+    {
+        goto end;
+    }
+
+end:
+    printf("%d\n", sum);
     return 0;
 }

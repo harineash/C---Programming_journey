@@ -1,12 +1,23 @@
-// To print 1-5
+// Printing sum from 1 to 5.
 #include <stdio.h>
 int main()
 {
-    int i, a;
-    for (i = 1; i <= 5; i++)
+    int sum = 0, i = 1;
+
+start:
+    if (i <= 5)
     {
-        a += i;
+
+        sum += i;
+        i++;
+        goto start;
     }
-    printf("%d\n", a);
+    else
+    {
+        goto end;
+    }
+
+end:
+    printf("%d\n", sum);
     return 0;
 }
