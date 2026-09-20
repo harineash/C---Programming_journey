@@ -1,16 +1,25 @@
+// Sum of two digit numbers whose ten's digit is 7
 #include <stdio.h>
 int main()
 {
-    int i, sum = 0;
+    int i = 70, sum = 0;
 
-    for (i = 70; i <= 79; i++)
+start:
+    if (i <= 79)
     {
         if (i % 2 != 0)
         {
             sum = sum + i;
         }
+        i++;
+        goto start;
+    }
+    else
+    {
+        goto end;
     }
 
+end:
     printf("%d", sum);
     return 0;
 }
