@@ -1,11 +1,21 @@
-// To print 1-5
+// Printing from 5 to 1.
 #include <stdio.h>
 int main()
 {
-    int i;
-    for (i = 5; i >= 1; i--)
+    int i = 5;
+
+start:
+    if (i >= 1)
     {
         printf("%d\n", i);
+        i--;
+        goto start;
     }
+    else
+    {
+        goto end;
+    }
+
+end:
     return 0;
 }
